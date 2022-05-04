@@ -1,14 +1,4 @@
-
-const admin = require("firebase-admin");
-
-const serviceAccount = require("path/to/serviceAccountKey.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
-
-
-const db = admin.firestore();
+import { booksCollection } from './connectDb.js' // creates object I want to add to the database
 
 const book = {
     title: 'Coding for Dummies',
@@ -16,7 +6,16 @@ const book = {
     genre: 'Reference Work',
     rating: 3.7
 }
+booksCollection.add(book) // adding book to my books collection
+.then(doc => console.log('Created book', doc.id)) // handle resolve
+.catch(err => console.error(err)) // handle reject
 
-db.collection('books').add(book)
+const book2 = {
+    title: 'Professional Troublemaker',
+    author: 'Luvvie Ajayi',
+    genre: 'Self-help',
+    rating: 4.1
+}
+booksCollection.add(book2)
 .then(doc => console.log('Created book', doc.id))
-.catch(err => console.error(err))
+.catch(err => console.error(err)) 

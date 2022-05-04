@@ -1,7 +1,6 @@
 {
   "name": "my-first-solo-firestore-sks",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -11,6 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^9.7.0",
     "firebase-admin": "^10.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephanieKSanchez/my-first-solo-firestore-sks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StephanieKSanchez/my-first-solo-firestore-sks/issues"
+  },
+  "homepage": "https://github.com/StephanieKSanchez/my-first-solo-firestore-sks#readme",
+  "description": ""
 }
